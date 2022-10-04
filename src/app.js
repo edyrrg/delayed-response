@@ -7,6 +7,8 @@ app.get(root + ':id', (req, res) => {
     let timer = Number(req.params.id)
     if (Number.isInteger(timer)) {
         setTimeout(() => { res.send(`after ${timer}s, CoreCode response: Hello World`) }, timer)
+    } else {
+        res.send('use numbers for delay!')
     }
 })
 
